@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1752915381910" clover="3.2.0">
-  <project timestamp="1752915381910" name="All files">
-    <metrics statements="417" coveredstatements="387" conditionals="33" coveredconditionals="26" methods="22" coveredmethods="17" elements="472" coveredelements="430" complexity="0" loc="417" ncloc="417" packages="8" files="14" classes="14"/>
+<coverage generated="1752926821969" clover="3.2.0">
+  <project timestamp="1752926821969" name="All files">
+    <metrics statements="421" coveredstatements="391" conditionals="33" coveredconditionals="26" methods="22" coveredmethods="17" elements="476" coveredelements="434" complexity="0" loc="421" ncloc="421" packages="9" files="15" classes="15"/>
     <package name="src">
       <metrics statements="25" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
       <file name="App.tsx" path="/Users/user/project/experiment/react-plain/react-vite-ts/src/App.tsx">
@@ -34,6 +34,15 @@
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.Constants">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="QueryClientConstants.ts" path="/Users/user/project/experiment/react-plain/react-vite-ts/src/Constants/QueryClientConstants.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components">
@@ -260,11 +269,11 @@
       </file>
     </package>
     <package name="src.lib">
-      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="queryClient.ts" path="/Users/user/project/experiment/react-plain/react-vite-ts/src/lib/queryClient.ts">
-        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -276,6 +285,7 @@
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.services">
