@@ -1,6 +1,7 @@
 import { useSuspenseQuery, type UseSuspenseQueryOptions } from '@tanstack/react-query'
 import { api } from '../services/api'
 import { type NYTResponse } from '../types/article'
+import { DEFAULT_STATE_TIME } from '../constants/QueryClientConstants'
 
 
 export const articleKeys = {
@@ -15,7 +16,7 @@ export const useArticles = (
     return useSuspenseQuery({
         queryKey: articleKeys.lists(keyword),
         queryFn: () => api.getArticles(keyword),
-        staleTime: 10 * 60 * 1000, // 10 minutes
+        staleTime: DEFAULT_STATE_TIME, // 5 minutes
         ...options,
     })
 }

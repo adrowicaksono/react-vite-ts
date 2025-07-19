@@ -12,7 +12,7 @@ export const Home: FC = () => {
     return (
         <>
             <div className='top-0 z-40 bg-white p-10'>
-                <h1 className="text-3xl font-bold underline text-blue-600 w-full">
+                <h1 className="text-3xl font-bold underline text-blue-600 w-full text-center">
                     Hello, New York Time News!
                 </h1>
                 <DebouncedInput

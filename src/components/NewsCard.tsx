@@ -1,4 +1,7 @@
 import type { NYTDocument, NYTKeyword } from '../types/article'
+import { parseAndFormatDate } from '../utils/CommonUtils'
+import { DEFAULT_NO_IMAGE_URL } from '../constants/CommonConstants'
+import { noImageHandler } from '../utils/CommonUtils'
 
 interface NewsCardProps {
     article: NYTDocument
@@ -13,11 +16,12 @@ const NewsCard = ({ article }: NewsCardProps) => {
         web_url,
         keywords,
         multimedia,
+        pub_date
     } = article
 
     const mainHeadline = headline?.main || ''
     const originalByline = byline?.original || ''
-    const imageUrl = multimedia?.default?.url || 'https://placehold.co/600x400/E0E0E0/333333?text=No+Image'
+    const imageUrl = multimedia?.default?.url || DEFAULT_NO_IMAGE_URL
     const imageCaption = multimedia?.caption || ''
 
     return (
@@ -27,11 +31,7 @@ const NewsCard = ({ article }: NewsCardProps) => {
                     src={imageUrl}
                     alt={mainHeadline || 'Article Image'}
                     className="w-full h-64 object-cover object-center rounded-t-xl"
-                    onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-                        const target = e.target as HTMLImageElement;
-                        target.onerror = null; // Prevents infinite loop
-                        target.src = 'https://placehold.co/600x400/E0E0E0/333333?text=Image+Load+Error';
-                    }}
+                    onError={noImageHandler}
                 />
                 {imageCaption && (
                     <p className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs p-2">
@@ -47,6 +47,8 @@ const NewsCard = ({ article }: NewsCardProps) => {
                 {originalByline && (
                     <p className="text-sm text-gray-600 mb-4 italic">
                         {originalByline}
+                        <br />
+                        {parseAndFormatDate(pub_date)}
                     </p>
                 )}
                 <p className="text-gray-800 text-base md:text-lg mb-4 leading-relaxed">

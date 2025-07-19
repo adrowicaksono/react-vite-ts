@@ -1,5 +1,5 @@
 import { QueryClient } from '@tanstack/react-query'
-import { DEFAULT_STATE_TIME, DEFAULT_GC_TIME, DEFAULT_QUERY_RETRY } from '../Constants/QueryClientConstants'
+import { DEFAULT_STATE_TIME, DEFAULT_GC_TIME, DEFAULT_QUERY_RETRY } from '../constants/QueryClientConstants'
 
 export const queryClient = new QueryClient({
     defaultOptions: {

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.73% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>72/76</span>
+                <span class='fraction'>78/78</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">28.57% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/7</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.73% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>72/76</span>
+                <span class='fraction'>78/78</span>
             </div>
         
             
@@ -155,7 +155,12 @@
 <a name='L90'></a><a href='#L90'>90</a>
 <a name='L91'></a><a href='#L91'>91</a>
 <a name='L92'></a><a href='#L92'>92</a>
-<a name='L93'></a><a href='#L93'>93</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -171,30 +176,11 @@
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
@@ -205,6 +191,24 @@
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-yes">22x</span>
@@ -248,6 +252,9 @@
 <span class="cline-any cline-yes">22x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import type { NYTDocument, NYTKeyword } from '../types/article'
+import { parseAndFormatDate } from '../utils/CommonUtils'
+import { DEFAULT_NO_IMAGE_URL } from '../constants/CommonConstants'
+import { noImageHandler } from '../utils/CommonUtils'
 &nbsp;
 interface NewsCardProps {
     article: NYTDocument
@@ -262,25 +269,22 @@ const NewsCard = ({ article }: NewsCardProps) =&gt; {
         web_url,
         keywords,
         multimedia,
+        pub_date
     } = article
 &nbsp;
-    const mainHeadline = headline?.<span class="branch-0 cbranch-no" title="branch not covered" >main || ''</span>
-    const originalByline = byline?.<span class="branch-0 cbranch-no" title="branch not covered" >original || ''</span>
-    const imageUrl = multimedia?.default?.<span class="branch-0 cbranch-no" title="branch not covered" >url || 'https://placehold.co/600x400/E0E0E0/333333?text=No+Image'</span>
-    const imageCaption = multimedia?.<span class="branch-0 cbranch-no" title="branch not covered" >caption || ''</span>
+    const mainHeadline = headline?.main || ''
+    const originalByline = byline?.original || ''
+    const imageUrl = multimedia?.default?.url || DEFAULT_NO_IMAGE_URL
+    const imageCaption = multimedia?.caption || ''
 &nbsp;
     return (
         &lt;div data-testid={`news-card-${article._id}`} className="bg-white rounded-xl shadow-lg overflow-hidden max-w-3xl w-full mx-auto my-8 transform transition-transform duration-300 hover:scale-[1.01]"&gt;
             &lt;div className="relative"&gt;
                 &lt;img
                     src={imageUrl}
-                    alt={<span class="branch-0 cbranch-no" title="branch not covered" >mainHeadline || 'Article Image'}</span>
+                    alt={mainHeadline || 'Article Image'}
                     className="w-full h-64 object-cover object-center rounded-t-xl"
-                    onError={<span class="fstat-no" title="function not covered" >(e: React.SyntheticEvent&lt;HTMLImageElement, Event&gt;) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >                        const target = e.target as HTMLImageElement;</span>
-<span class="cstat-no" title="statement not covered" >                        target.onerror = null; // Prevents infinite loop</span>
-<span class="cstat-no" title="statement not covered" >                        target.src = 'https://placehold.co/600x400/E0E0E0/333333?text=Image+Load+Error';</span>
-<span class="cstat-no" title="statement not covered" >                    }}</span>
+                    onError={noImageHandler}
                 /&gt;
                 {imageCaption &amp;&amp; (
                     &lt;p className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-xs p-2"&gt;
@@ -296,6 +300,8 @@ const NewsCard = ({ article }: NewsCardProps) =&gt; {
                 {originalByline &amp;&amp; (
                     &lt;p className="text-sm text-gray-600 mb-4 italic"&gt;
                         {originalByline}
+                        &lt;br /&gt;
+                        {parseAndFormatDate(pub_date)}
                     &lt;/p&gt;
                 )}
                 &lt;p className="text-gray-800 text-base md:text-lg mb-4 leading-relaxed"&gt;
@@ -346,7 +352,7 @@ export default NewsCard</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-19T12:07:01.918Z
+                at 2025-07-19T22:25:30.813Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

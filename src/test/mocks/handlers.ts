@@ -60,11 +60,11 @@ const mockNYTResponse: NYTResponse = {
         {
             "abstract": "A little-noticed plan for an “infertility training center” signals that the administration intends to take a new approach with Title X, which has long helped low-income women access contraception.",
             "byline": {
-                "original": "By Caroline Kitchener and Sheryl Gay Stolberg"
+                "original": ""
             },
             "document_type": "article",
             "headline": {
-                "main": "Under Trump, a New Focus for a Birth Control Program: Helping Women Get Pregnant",
+                "main": "",
                 "kicker": "",
                 "print_headline": ""
             },
@@ -87,12 +87,12 @@ const mockNYTResponse: NYTResponse = {
                 }
             ],
             "multimedia": {
-                "caption": "The Trump administration is aiming to refashion Title X, a 55-year-old program focused on providing birth control to millions of low-income women, to combat infertility instead.",
+                "caption": "",
                 "credit": "Kent Nishimura for The New York Times",
                 "default": {
-                    "url": "https://static01.nyt.com/images/2025/07/18/multimedia/dc-trump-infertility-2-htfm/dc-trump-infertility-2-htfm-articleLarge.jpg",
-                    "height": 900,
-                    "width": 600
+                    "url": '',
+                    "height": 0,
+                    "width": 0
                 },
                 "thumbnail": {
                     "url": "https://static01.nyt.com/images/2025/07/18/multimedia/dc-trump-infertility-2-htfm/dc-trump-infertility-2-htfm-thumbStandard.jpg",
