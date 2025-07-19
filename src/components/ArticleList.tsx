@@ -1,9 +1,8 @@
-import type { NYTDocument } from '../types/article';
-import NewsCard from './NewsCard';
-import { useArticles } from '../hooks/useArticles';
+import type { NYTDocument } from '../types/article'
+import NewsCard from './NewsCard'
+import { useArticles } from '../hooks/useArticles'
 
 interface ArticleListProps {
-    // articles: NYTDocument[]
     keyword: string
 }
 

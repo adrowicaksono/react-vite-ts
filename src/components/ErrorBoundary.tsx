@@ -31,7 +31,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
         if (this.state.hasError) {
             // You can render any custom fallback UI
             return (
-                <div>
+                <div data-testid="error">
                     <h1>Something went wrong.</h1>
                     {this.state.error && <p>Error: {this.state.error.message}</p>}
                     {this.state.errorInfo && (

@@ -21,7 +21,7 @@ const NewsCard = ({ article }: NewsCardProps) => {
     const imageCaption = multimedia?.caption || ''
 
     return (
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden max-w-3xl w-full mx-auto my-8 transform transition-transform duration-300 hover:scale-[1.01]">
+        <div data-testid={`news-card-${article._id}`} className="bg-white rounded-xl shadow-lg overflow-hidden max-w-3xl w-full mx-auto my-8 transform transition-transform duration-300 hover:scale-[1.01]">
             <div className="relative">
                 <img
                     src={imageUrl}
@@ -41,7 +41,7 @@ const NewsCard = ({ article }: NewsCardProps) => {
             </div>
 
             <div className="p-6 md:p-8">
-                <h2 data-testid="news-card-headline" className="font-extrabold text-2xl md:text-3xl text-gray-900 mb-3 leading-tight">
+                <h2 className="font-extrabold text-2xl md:text-3xl text-gray-900 mb-3 leading-tight">
                     {mainHeadline}
                 </h2>
                 {originalByline && (
