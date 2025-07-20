@@ -1,3 +1,4 @@
+import type { SortOptions } from '../hooks/useArticles';
 import type { NYTResponse } from '../types/article'
 
 class ApiError extends Error {
@@ -18,8 +19,8 @@ const handleResponse = async <T>(response: Response): Promise<T> => {
 }
 
 export const api = {
-    getArticles: async (keyword: string): Promise<NYTResponse> => {
-        const response = await fetch(`${import.meta.env.VITE_NYT_API_BASE_URL}?q=${keyword}&api-key=${import.meta.env.VITE_NYT_API_KEY}`)
+    getArticles: async (keyword: string, page: number, sort: SortOptions): Promise<NYTResponse> => {
+        const response = await fetch(`${import.meta.env.VITE_NYT_API_BASE_URL}?q=${keyword}&page=${page}&sort=${sort}&api-key=${import.meta.env.VITE_NYT_API_KEY}`)
         return handleResponse<NYTResponse>(response);
     },
 }
