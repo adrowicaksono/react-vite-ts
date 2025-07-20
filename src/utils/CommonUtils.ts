@@ -2,7 +2,7 @@ import moment from 'moment'
 import { DEFAULT_NO_IMAGE_URL } from '../constants/CommonConstants'
 
 export const parseAndFormatDate = (isoDateString: string) => {
-    return moment(isoDateString).format('YYYY, DD MMM hh:mm A');
+    return moment(isoDateString).format('MMMM, DD YYYY hh:mm A');
 }
 
 export const noImageHandler = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
